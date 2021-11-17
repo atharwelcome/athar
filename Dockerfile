@@ -1,4 +1,4 @@
-FROM ec2-user:latest
+FROM ec2-user: latest
 MAINTAINER atharwelcome@gmail.com
 RUN yum install -y httpd  \
  zip \
@@ -9,4 +9,4 @@ RUN unzip plusbusiness.zip
 RUN cp -rvf plusbusiness/* .
 RUN rm -rf _MACOSX plusbusiness plusbusiness.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80
+EXPOSE 8080
